@@ -1,0 +1,112 @@
+wGetResponse.txt file info
+
+usr.php
+	function=addUser
+	http://localhost/xampp/insurence/index.php?oper=addUser&id=tpatel&name=Tapan_Patel&email=tpatel89@live.com&pass=1234&dob=19891003&isRem=true&secans=bombay
+	
+	response: {"retval":"ok","method":"addUser","valuersp":1}
+	
+	
+	function=authenticate
+	http://localhost/xampp/insurence/index.php?oper=authenticate&user_id=tpatel&user_pass=1234&user_ssnkey=ae21237d6b897d61b795630c7173a3cb
+	
+	response: {"retval":"ok","method":"authenticate","valuersp":"tpatel"}
+	
+	
+	function=getCoupons
+	http://localhost/xampp/insurence/index.php?oper=getCoupons&date=20110504
+	
+	response: {"retval":"ok","method":"getCoupons","valuersp":[{"coupon_id":"1","coupon_desc":"Multi_car Discount","exp_date":"2011-06-10","insert_date":"2011-06-01","coupon_image":"c:\/coupons\/image"},
+			  {"coupon_id":"2","coupon_desc":"Multi_car Discount","exp_date":"2011-07-12","insert_date":"2011-06-01","coupon_image":"c:\/coupons\/image\/next"}]}
+			  
+	
+	function=getOffers
+	http://localhost/xampp/insurence/index.php?oper=getOffers&date=20110504
+	
+	response: {"retval":"ok","method":"getOffers","valuersp":
+			  [{"offer_id":"1","offer_name":"15% Off","offer_desc":"summer sale for 15% auto insurance","exp_date":"2011-06-10","insert_date":"2011-06-01","offer_image":"c:\/offers\/images"}]}
+			  
+			  
+	function=makeClaim
+	http://localhost/xampp/insurence/index.php?oper=makeClaim&cust_id=3&DT=20110609103200&location=CA&police=TRUE&desc=poepleGotKilled&injury=noInjury&extrainfo=none
+	
+	response: {"retval":"ok","method":"makeClaim","valuersp":1}
+	
+	
+	function=getClaims
+	http://localhost/xampp/insurence/index.php?oper=getClaims&cust_id=3
+	
+	
+	response: {"retval":"ok","method":"getClaims","valuersp":[{"claims_id":"3","claims_user_id":"3","claims_DT":"2011-06-09 10:32:00",
+			  "claims_location":"CA","claims_police_response":"0","claims_desc":"poepleGotKilled","claims_injury":"noInjury","claims_otherInfo":"none"}]}
+	
+	
+	function=getLocationZip
+	http://localhost/xampp/insurence/index.php?oper=getLocationZip&zip=7109
+	
+	response: {"retval":"ok","method":"getLocationZip","valuersp":[{"location_name":"belleville branch","city_id_key":"7109","num":"2147483647",
+	"address":"344B main st, belleville, NJ","email":"irfan@beyondwireless","longitude":"8388607","latitude":"8388607"}]}
+	
+	
+	function=getLocationName
+	http://localhost/xampp/insurence/index.php?oper=getLocationName&name=belleville%20branch
+	
+	response: {"retval":"ok","method":"getLocationName","valuersp":[{"location_name":"belleville branch","city_id_key":"7109","num":"2147483647",
+			  "address":"344B main st, belleville, NJ","email":"irfan@beyondwireless","longitude":"8388607","latitude":"8388607"}]}
+			  
+			  
+	function=getLocationPhoneNum
+	http://localhost/xampp/insurence/index.php?oper=getLocationPhoneNum&phoneNum=2147483647
+	
+	response: {"retval":"ok","method":"getLocationPhoneNum","valuersp":[{"location_name":"belleville branch","city_id_key":"7109","num":"2147483647",
+			  "address":"344B main st, belleville, NJ","email":"irfan@beyondwireless","longitude":"8388607","latitude":"8388607"}]}
+	
+	
+	function=getLocationAddress
+	http://localhost/xampp/insurence/index.php?oper=getLocationAddress&add=344B%20main%20st,%20belleville,%20NJ
+	
+	response: {"retval":"ok","method":"getLocationAddress","valuersp":[{"location_name":"belleville branch","city_id_key":"7109","num":"2147483647",
+			  "address":"344B main st, belleville, NJ","email":"irfan@beyondwireless","longitude":"8388607","latitude":"8388607"}]}
+	
+	
+	function=getLocationGeoCode
+	http://localhost/xampp/insurence/index.php?oper=getLocationGeoCode&long=8388607&lat=8388607
+	
+	response: {"retval":"ok","method":"getLocationGeoCode","valuersp":[{"location_name":"belleville branch","city_id_key":"7109","num":"2147483647",
+	"address":"344B main st, belleville, NJ","email":"irfan@beyondwireless","longitude":"8388607","latitude":"8388607"}]}
+	
+	
+	function=getPolicies
+	http://localhost/xampp/insurence/index.php?oper=getPolicies&cust_id=1
+	
+	response: {"retval":"ok","method":"getPolicies","valuersp":[{"policy_number":"1","cust_id":"1","policy_period_from":"0000-00-00","policy_period_to":"0000-00-00","balance":"500"},
+			  {"policy_number":"2","cust_id":"1","policy_period_from":"1111-11-11","policy_period_to":"1111-11-11","balance":"200"}]}
+	
+	
+	function=getPolicy
+	http://localhost/xampp/insurence/index.php?oper=getPolicy&pol_num=1
+	
+	response: {"retval":"ok","method":"getPolicy","valuersp":[{"policy_number":"1","cust_id":"1","policy_period_from":"0000-00-00","policy_period_to":"0000-00-00","balance":"500"}]}
+	
+	
+	function=getQuotes
+	http://localhost/xampp/insurence/index.php?oper=getQuotes&cust_id=1
+	
+	response: {"retval":"ok","method":"getQuotes","valuersp":[{"quotes_id":"1","quotes_user_id":"1","quotes_date":"2011-04-03","quotes_type":"car","quotes_premium":"500","quotes_desc":
+			  "Lexus ES330 62,000 Burgendy 4dr sedan"}]}
+	
+	
+	function=makeQuote
+	http://localhost/xampp/insurence/index.php?oper=makeQuote&cust_id=4&date=20100401&type=house&premium=1000&desc=2%20story%20building
+	
+	response: {"retval":"ok","method":"makeQuote","valuersp":1}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
